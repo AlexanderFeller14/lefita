@@ -45,7 +45,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var p=new URLSearchParams(window.location.search);var q=p.get('theme');if(q==='dark'||q==='light'){document.documentElement.setAttribute('data-theme',q);localStorage.setItem('lefita-theme',q);return;}var t=localStorage.getItem('lefita-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`
+            __html: `(function(){try{var p=new URLSearchParams(window.location.search);var q=p.get('theme');if(q==='dark'||q==='light'){document.documentElement.setAttribute('data-theme',q);localStorage.setItem('lefita-theme',q);return;}var t=localStorage.getItem('lefita-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`
           }}
         />
       </head>
