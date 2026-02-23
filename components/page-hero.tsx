@@ -25,8 +25,8 @@ type PageHeroProps = {
 
 function SmartLink({ href, label, primary }: HeroCta & { primary?: boolean }) {
   const baseClass = primary
-    ? "inline-flex rounded-full bg-pine px-5 py-3 text-sm font-bold text-white transition hover:bg-clay"
-    : "inline-flex rounded-full border border-pine/25 px-5 py-3 text-sm font-semibold text-pine transition hover:bg-pine hover:text-white";
+    ? "inline-flex w-full justify-center rounded-full bg-pine px-5 py-3 text-sm font-bold text-white transition hover:bg-clay sm:w-auto"
+    : "inline-flex w-full justify-center rounded-full border border-pine/25 px-5 py-3 text-sm font-semibold text-pine transition hover:bg-pine hover:text-white sm:w-auto";
 
   return (
     <a href={href} className={baseClass}>
@@ -52,12 +52,12 @@ export function PageHero({
 }: PageHeroProps) {
   const toneClass =
     tone === "sand"
-      ? "border-clay/35 bg-gradient-to-br from-[#f6efe5] via-[#f3eadf] to-[#efe5d8]"
+      ? "hero-tone-sand border-clay/35 bg-gradient-to-br from-[#f6efe5] via-[#f3eadf] to-[#efe5d8]"
       : tone === "sage"
-        ? "border-moss/35 bg-gradient-to-br from-[#e9f3ee] via-[#e5f0ea] to-[#deebe4]"
+        ? "hero-tone-sage border-moss/35 bg-gradient-to-br from-[#e9f3ee] via-[#e5f0ea] to-[#deebe4]"
         : tone === "oat"
-          ? "border-pine/20 bg-gradient-to-br from-[#f7f6f1] via-[#f3f1ea] to-[#efede5]"
-          : "border-pine/20 bg-gradient-to-br from-[#f5faf7] via-[#f0f6f3] to-[#e8f0ec]";
+          ? "hero-tone-oat border-pine/20 bg-gradient-to-br from-[#f7f6f1] via-[#f3f1ea] to-[#efede5]"
+          : "hero-tone-mist border-pine/20 bg-gradient-to-br from-[#f5faf7] via-[#f0f6f3] to-[#e8f0ec]";
 
   const chipClass =
     tone === "sand"
@@ -72,16 +72,16 @@ export function PageHero({
   const hasSideContent = layout === "split" && (imageSrc || facts.length > 0);
 
   return (
-    <section className={`fade-in-up rounded-[2rem] border p-6 shadow-soft md:p-10 ${toneClass}`}>
-      <div className={hasSideContent ? "grid gap-7 lg:grid-cols-[1.2fr_0.8fr] lg:items-start" : ""}>
+    <section className={`fade-in-up rounded-[1.8rem] border p-5 shadow-soft sm:rounded-[2rem] sm:p-6 md:p-10 ${toneClass}`}>
+      <div className={hasSideContent ? "grid gap-5 lg:grid-cols-[1.2fr_0.8fr] lg:items-start lg:gap-7" : ""}>
         <div>
-          <div className={`mb-4 h-1 w-14 rounded-full ${accentClass}`} />
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-clay">{eyebrow}</p>
-          <h1 className="mt-3 max-w-4xl font-display text-4xl leading-[0.97] text-pine md:text-6xl">{title}</h1>
-          <p className="mt-4 max-w-3xl text-base text-pine/90">{intro}</p>
+          <div className={`hero-accent mb-4 h-1 w-14 rounded-full ${accentClass}`} />
+          <p className="hero-eyebrow text-xs font-bold uppercase tracking-[0.2em] text-clay">{eyebrow}</p>
+          <h1 className="mt-3 max-w-4xl font-display text-4xl leading-[0.97] text-pine sm:text-5xl md:text-6xl">{title}</h1>
+          <p className="mt-4 max-w-3xl text-sm text-pine/90 sm:text-base">{intro}</p>
 
           {(primaryCta || secondaryCta) ? (
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-3">
               {primaryCta ? <SmartLink {...primaryCta} primary /> : null}
               {secondaryCta ? <SmartLink {...secondaryCta} /> : null}
             </div>
@@ -106,7 +106,7 @@ export function PageHero({
         {hasSideContent ? (
           <aside className="space-y-3 lg:flex lg:h-full lg:flex-col">
             {imageSrc ? (
-              <div className="relative h-56 overflow-hidden rounded-2xl border border-pine/15 bg-white md:h-64 lg:h-full lg:min-h-[20rem]">
+              <div className="relative h-44 overflow-hidden rounded-2xl border border-pine/15 bg-white sm:h-52 md:h-64 lg:h-full lg:min-h-[20rem]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={imageSrc}

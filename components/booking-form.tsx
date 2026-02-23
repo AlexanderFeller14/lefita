@@ -116,16 +116,16 @@ export function BookingForm() {
   return (
     <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
       <form
-        className="fade-in-up rounded-3xl border border-pine/10 bg-white p-6 shadow-soft md:p-8"
+        className="fade-in-up rounded-3xl border border-pine/10 bg-white p-5 shadow-soft md:p-8"
         noValidate
         onSubmit={handleSubmit}
       >
-        <h2 className="font-display text-3xl text-pine">Termin anfragen</h2>
+        <h2 className="font-display text-2xl text-pine sm:text-3xl">Termin anfragen</h2>
         <p className="mt-2 text-sm text-pine/80">
           {appointmentFacts.bookingRule} Bitte möglichst vollständig ausfüllen.
         </p>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
+        <div className="mt-5 grid gap-3 md:grid-cols-2 md:gap-4">
           <Field label="Service" error={errors.service} required>
             <select
               name="service"
@@ -295,8 +295,8 @@ export function BookingForm() {
         ) : null}
       </form>
 
-      <aside className="fade-in-up space-y-4 rounded-3xl border border-pine/10 bg-white p-6 shadow-soft md:p-8">
-        <h2 className="font-display text-3xl text-pine">Hinweise</h2>
+      <aside className="fade-in-up space-y-4 rounded-3xl border border-pine/10 bg-white p-5 shadow-soft md:p-8">
+        <h2 className="font-display text-2xl text-pine sm:text-3xl">Hinweise</h2>
 
         <div className="space-y-4 text-sm text-pine/85">
           <Hint title="Ersttermin" body={appointmentFacts.firstVisit} />

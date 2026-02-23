@@ -155,7 +155,7 @@ export default function HomePage() {
               <h2 className="text-lg font-semibold text-pine">Mini Ablauf</h2>
               <ol className="mt-3 space-y-3 text-sm text-pine/85">
                 {homeFlow.map((step) => (
-                  <li key={step.title} className="rounded-xl bg-sand/55 px-3 py-2">
+                  <li key={step.title} className="rounded-xl border border-pine/10 bg-white/85 px-3 py-2">
                     <p className="font-semibold text-pine">{step.title}</p>
                     <p className="mt-0.5">{step.body}</p>
                   </li>
