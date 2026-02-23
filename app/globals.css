@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg-main: #eef4ef;
+  --bg-card: #ffffff;
+  --text-main: #153936;
+  --text-muted: #335a57;
+  --accent: #2aa7a1;
+  --brand: #0f3f3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    linear-gradient(180deg, #f6faf8 0%, #ecf3ef 100%);
+  color: var(--text-main);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--font-display), "Times New Roman", serif;
+  letter-spacing: -0.02em;
+}
+
+.page-shell {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .page-shell {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.input-base {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(15, 63, 61, 0.2);
+  background: #fff;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input-base:focus {
+  outline: none;
+  border-color: rgba(186, 141, 109, 0.9);
+  box-shadow: 0 0 0 3px rgba(186, 141, 109, 0.2);
+}
+
+.pill-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #0f3f3d;
+  color: white;
+  padding: 0.52rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.pill-link:hover {
+  transform: translateY(-1px);
+  background: #ba8d6d;
+}
+
+.card-plain {
+  border: 1px solid rgba(15, 63, 61, 0.12);
+  background: #ffffff;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 24px rgba(15, 63, 61, 0.06);
+}
+
+.card-sand {
+  border: 1px solid rgba(186, 141, 109, 0.25);
+  background: #f5eee6;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 24px rgba(186, 141, 109, 0.08);
+}
+
+.card-sage {
+  border: 1px solid rgba(126, 159, 131, 0.3);
+  background: #eaf3ee;
+  border-radius: 0.85rem;
+  box-shadow: 0 8px 24px rgba(126, 159, 131, 0.08);
+}
+
+.card-outline {
+  border: 1px dashed rgba(15, 63, 61, 0.35);
+  background: #fbfdfc;
+  border-radius: 0.85rem;
+}
+
+.fade-in-up {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+main,
+.page-shell,
+section,
+article {
+  opacity: 1;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
