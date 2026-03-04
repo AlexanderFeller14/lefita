@@ -133,12 +133,16 @@ a {
   border-radius: 0.85rem;
 }
 
+.section-panel {
+  background: linear-gradient(145deg, #f8faf9 0%, #f2f6f4 100%);
+}
+
 .section-sand {
-  background: linear-gradient(145deg, #f0e8df 0%, #ebe2d7 100%);
+  background: linear-gradient(145deg, #f4f0ea 0%, #eeead3 100%);
 }
 
 .section-sage {
-  background: linear-gradient(145deg, #e8efe6 0%, #dfe8db 100%);
+  background: linear-gradient(145deg, #eaf2ec 0%, #e2ece5 100%);
 }
 
 .hero-eyebrow {
@@ -305,14 +309,22 @@ article {
 
 /* ── Dark mode: sections ──────────────────────────── */
 
-/* Light section-sand: warm beige → Dark equivalent */
-[data-theme="dark"] .section-sand {
-  background: #1a1814 !important;
+/* Light section-panel: subtle cool white → Dark equivalent */
+[data-theme="dark"] .section-panel {
+  background: linear-gradient(145deg, #151d18 0%, #131b16 100%) !important;
+  border-color: rgba(180, 210, 200, 0.1) !important;
 }
 
-/* Light section-sage: #e9f2ed → Dark equivalent */
+/* Light section-sand: soft warm cream → Dark equivalent */
+[data-theme="dark"] .section-sand {
+  background: linear-gradient(145deg, #1a1814 0%, #181612 100%) !important;
+  border-color: rgba(180, 170, 140, 0.1) !important;
+}
+
+/* Light section-sage: soft sage → Dark equivalent */
 [data-theme="dark"] .section-sage {
-  background: #13211b !important;
+  background: linear-gradient(145deg, #13211b 0%, #111e18 100%) !important;
+  border-color: rgba(126, 159, 131, 0.12) !important;
 }
 
 /* ── Dark mode: inputs ────────────────────────────── */

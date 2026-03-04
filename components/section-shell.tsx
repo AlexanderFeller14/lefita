@@ -21,11 +21,11 @@ export function SectionShell({
 }: SectionShellProps) {
   const variantClass =
     variant === "panel"
-      ? "rounded-2xl border border-pine/12 bg-white/85 p-4 shadow-soft md:p-7"
+      ? "section-panel rounded-2xl border border-pine/10 p-4 shadow-soft md:p-7"
       : variant === "sand"
-        ? "section-sand rounded-2xl border border-clay/25 p-4 shadow-soft md:p-7"
+        ? "section-sand rounded-2xl border border-pine/10 p-4 shadow-soft md:p-7"
         : variant === "sage"
-          ? "section-sage rounded-2xl border border-moss/30 p-4 shadow-soft md:p-7"
+          ? "section-sage rounded-2xl border border-pine/10 p-4 shadow-soft md:p-7"
           : "";
 
   return (
