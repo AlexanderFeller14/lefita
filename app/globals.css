@@ -134,11 +134,11 @@ a {
 }
 
 .section-sand {
-  background: rgba(242, 236, 228, 0.55);
+  background: linear-gradient(145deg, #f0e8df 0%, #ebe2d7 100%);
 }
 
 .section-sage {
-  background: #e9f2ed;
+  background: linear-gradient(145deg, #e8efe6 0%, #dfe8db 100%);
 }
 
 .hero-eyebrow {
