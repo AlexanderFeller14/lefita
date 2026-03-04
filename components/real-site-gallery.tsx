@@ -16,7 +16,7 @@ export function RealSiteGallery({
 
   return (
     <section className="fade-in-up rounded-3xl border border-pine/10 bg-white/85 p-6 shadow-soft md:p-10">
-      <p className="text-xs font-bold uppercase tracking-[0.18em] text-clay">Originalbilder</p>
+      <p className="hero-eyebrow text-xs font-bold uppercase tracking-[0.18em]">Originalbilder</p>
       <h2 className="mt-2 font-display text-3xl text-pine md:text-4xl">{title}</h2>
       <p className="mt-3 max-w-3xl text-sm text-pine/80 md:text-base">{intro}</p>
 

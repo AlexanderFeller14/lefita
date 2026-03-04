@@ -247,7 +247,7 @@ article {
   color: #dceae5 !important;
 }
 
-/* Light text-clay #2aa7a1 → Dark: brighter teal */
+/* Light text-clay #2aa7a1 → Dark: brighter teal for accents */
 [data-theme="dark"] [class*="text-clay"] {
   color: #5dd4c8 !important;
 }

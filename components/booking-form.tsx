@@ -190,7 +190,7 @@ function FormSection({
           {icon}
         </span>
         <div className="flex items-baseline gap-2.5">
-          <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-clay/80">
+          <span className="hero-eyebrow text-[10px] font-bold uppercase tracking-[0.18em]">
             Schritt {step}
           </span>
           <legend className="text-base font-semibold text-pine tracking-tight">
@@ -512,7 +512,7 @@ export function BookingForm() {
 
         {/* Direct contact */}
         <div className="card-sand rounded-3xl p-5 sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-clay">
+          <p className="hero-eyebrow text-xs font-bold uppercase tracking-[0.16em]">
             Direktkontakt
           </p>
           <p className="mt-2.5 text-sm leading-relaxed text-pine/85">
