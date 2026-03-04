@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
 
 const requiredFields = [
-  "service",
-  "dogName",
-  "breed",
-  "size",
-  "ownerName",
-  "phone",
+  "salutation",
+  "firstName",
+  "lastName",
   "email",
-  "preferredDate"
+  "phone",
+  "topic",
+  "preferredDate",
+  "preferredTime"
 ] as const;
 
 export async function POST(request: Request) {

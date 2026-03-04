@@ -23,7 +23,7 @@ export default function TerminPage() {
         layout="compact"
       />
 
-      <div id="buchungsformular" className="mt-8 scroll-mt-28">
+      <div id="buchungsformular" className="mt-10 scroll-mt-28">
         <BookingForm />
       </div>
     </div>
