@@ -32,8 +32,8 @@ export function SiteHeader() {
           <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-pine text-xs font-bold text-white">
             LF
           </span>
-          <span className="font-display text-lg text-pine transition group-hover:text-clay sm:text-xl">
-            {siteConfig.legalBrand}
+          <span className="brand-name font-display text-lg text-pine transition group-hover:text-clay sm:text-xl">
+            Lefita
           </span>
         </Link>
 
