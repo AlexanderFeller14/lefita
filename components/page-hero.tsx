@@ -2,7 +2,7 @@ type HeroCta = {
   href: string;
   label: string;
 };
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 type HeroTone = "mist" | "sand" | "sage" | "oat";
 type HeroLayout = "split" | "compact";
@@ -19,6 +19,7 @@ type PageHeroProps = {
   imageSrc?: string;
   imageAlt?: string;
   imagePosition?: string;
+  imageMobilePosition?: string;
   compactFacts?: boolean;
   supplement?: ReactNode;
 };
@@ -47,6 +48,7 @@ export function PageHero({
   imageSrc,
   imageAlt = "",
   imagePosition = "center center",
+  imageMobilePosition,
   compactFacts = false,
   supplement
 }: PageHeroProps) {
@@ -113,8 +115,13 @@ export function PageHero({
                   alt={imageAlt}
                   loading="eager"
                   decoding="sync"
-                  style={{ objectPosition: imagePosition }}
-                  className="h-full w-full object-cover"
+                  style={
+                    {
+                      "--hero-image-position": imagePosition,
+                      "--hero-image-mobile-position": imageMobilePosition ?? imagePosition
+                    } as CSSProperties
+                  }
+                  className="h-full w-full object-cover [object-position:var(--hero-image-mobile-position)] md:[object-position:var(--hero-image-position)]"
                 />
               </div>
             ) : null}

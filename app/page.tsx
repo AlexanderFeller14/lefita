@@ -39,6 +39,7 @@ export default function HomePage() {
         imageSrc="/lefita-original-2.jpg"
         imageAlt="Hund im Lefita Salon"
         imagePosition="center bottom"
+        imageMobilePosition="center 18%"
         compactFacts
         supplement={
           <div className="max-w-2xl overflow-hidden rounded-2xl border border-pine/15 bg-white">

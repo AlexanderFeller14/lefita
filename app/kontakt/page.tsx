@@ -31,39 +31,33 @@ export default function KontaktPage() {
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
         <SectionShell
-          eyebrow="Standort"
-          title="Adresse"
-          intro="Die Unternehmensdaten wurden von lefita.ch übernommen."
+          eyebrow="Standort & Kontakt"
+          title="Adresse und schnelle Wege"
+          intro="Alle Kontaktdaten auf einen Blick: direkt anrufen, E-Mail senden, Termin anfragen oder Route starten."
           variant="panel"
+          className="h-full"
         >
-          <address className="not-italic text-sm text-pine/85">
-            <p className="font-semibold text-pine">{siteConfig.legalBrand}</p>
-            <p>{siteConfig.owner}</p>
-            <p>{siteConfig.street}</p>
-            <p>
-              {siteConfig.postalCode} {siteConfig.city}
-            </p>
-            <p>Schweiz</p>
-          </address>
+          <div className="flex h-full flex-col gap-8">
+            <address className="not-italic text-sm leading-relaxed text-pine/85">
+              <p>{siteConfig.owner}</p>
+              <p>{siteConfig.street}</p>
+              <p>
+                {siteConfig.postalCode} {siteConfig.city}
+              </p>
+              <p>Schweiz</p>
+            </address>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            <a href={ctaLinks.call} className="pill-link">
-              Anrufen
-            </a>
-            <a href={ctaLinks.mail} className="pill-link">
-              E-Mail
-            </a>
-            <Link href={ctaLinks.booking} className="pill-link">
-              Termin
-            </Link>
-            <a href={ctaLinks.route} target="_blank" rel="noreferrer" className="pill-link">
-              Route planen
-            </a>
-          </div>
-
-          <div className="mt-5 rounded-xl border border-clay/35 bg-white p-4 text-sm text-pine/80">
-            <p className="font-semibold text-pine">Parkinformation</p>
-            <p className="mt-1">Auf der aktuellen Quellseite sind keine expliziten Parkhinweise veröffentlicht.</p>
+            <div className="flex flex-wrap gap-3">
+              <a href={ctaLinks.call} className="pill-link">
+                Jetzt anrufen
+              </a>
+              <a href={ctaLinks.mail} className="pill-link">
+                E-Mail senden
+              </a>
+              <Link href={ctaLinks.booking} className="pill-link">
+                Termin anfragen
+              </Link>
+            </div>
           </div>
         </SectionShell>
 
