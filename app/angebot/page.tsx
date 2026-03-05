@@ -41,23 +41,56 @@ export default function AngebotPage() {
           variant="panel"
         >
           <div className="grid gap-3 md:grid-cols-3">
-            {offerCards.map((card) => (
-              <article key={card.title} className="rounded-xl border border-pine/15 bg-white p-4 md:p-5">
-                <h2 className="text-lg font-semibold text-pine">{card.title}</h2>
-                {card.body.includes(",") ? (
-                  <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-pine/85">
-                    {splitServiceText(card.body).map((line) => (
-                      <li key={`${card.title}-${line}`} className="flex gap-2">
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-pine/70" />
-                        <span>{line}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="mt-3 text-sm leading-relaxed text-pine/85">{card.body}</p>
-                )}
-              </article>
-            ))}
+            {offerCards.map((card, i) => {
+              return (
+                <article
+                  key={card.title}
+                  className="group rounded-2xl border border-pine/10 bg-white p-5 transition hover:border-pine/25 hover:shadow-md md:p-6"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-clay/8 text-clay transition group-hover:bg-clay/15">
+                    {i === 0 && (
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="6" cy="6" r="3" />
+                        <circle cx="6" cy="18" r="3" />
+                        <line x1="20" y1="4" x2="8.12" y2="15.88" />
+                        <line x1="14.47" y1="14.48" x2="20" y2="20" />
+                        <line x1="8.12" y1="8.12" x2="12" y2="12" />
+                      </svg>
+                    )}
+                    {i === 1 && (
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19.5 12.6c0 2.2-1.1 4.2-2.8 5.4-.6.4-1.2.7-1.9.9-.4.1-.9.1-1.3.1h-3c-.4 0-.9 0-1.3-.1-.7-.2-1.3-.5-1.9-.9C5.6 16.8 4.5 14.8 4.5 12.6c0-1.5.5-2.9 1.4-4 .4-.5 1-.5 1.4 0 .6.7 1.5 1.2 2.5 1.2s1.9-.5 2.5-1.2c.4-.5 1-.5 1.4 0s1.5 1.2 2.5 1.2 1.9-.5 2.5-1.2c.4-.5 1-.5 1.4 0 .9 1.1 1.4 2.5 1.4 4z" />
+                        <path d="M12 4V2" />
+                        <path d="M8 5.2L7 3.5" />
+                        <path d="M16 5.2l1-1.7" />
+                      </svg>
+                    )}
+                    {i === 2 && (
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M7 3c-1.5 0-3 1.2-3 3.5 0 2 .8 3.5 1.5 5l2.5 6c.3.8 1 1.5 2 1.5h4c1 0 1.7-.7 2-1.5l2.5-6c.7-1.5 1.5-3 1.5-5C20 4.2 18.5 3 17 3c-1.5 0-2.5 1-3 2-.5 1-1 1.5-2 1.5s-1.5-.5-2-1.5C9.5 4 8.5 3 7 3z" />
+                      </svg>
+                    )}
+                  </span>
+
+                  <h2 className="mt-3 text-lg font-bold text-pine">{card.title}</h2>
+
+                  <div className="mt-1 h-px w-10 rounded bg-clay/25" />
+
+                  {card.body.includes(",") ? (
+                    <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-pine/85">
+                      {splitServiceText(card.body).map((line) => (
+                        <li key={`${card.title}-${line}`} className="flex gap-2">
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-clay/50" />
+                          <span>{line}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-3 text-sm leading-relaxed text-pine/85">{card.body}</p>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </SectionShell>
 
