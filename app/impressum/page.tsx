@@ -48,27 +48,42 @@ export default function ImpressumPage() {
 
         <div className="mt-6 space-y-6 text-sm text-pine/85">
           <section className="border-l-2 border-clay/35 pl-4">
-            <h2 className="text-lg font-semibold text-pine">Haftungsausschluss</h2>
+            <h2 className="text-lg font-semibold text-pine">Haftungsausschluss — Inhalte</h2>
             <p className="mt-2">
-              Alle Informationen auf dieser Website werden sorgfältig geprüft. Für Vollständigkeit, Richtigkeit und
-              Aktualität wird jedoch keine Gewähr übernommen. Haftungsansprüche aufgrund materieller oder immaterieller
-              Schäden, die aus der Nutzung der veröffentlichten Inhalte entstehen, sind ausgeschlossen, soweit kein
-              nachweislich vorsätzliches oder grobfahrlässiges Verschulden vorliegt.
+              Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Gewähr für die Aktualität, Vollständigkeit
+              und Richtigkeit der bereitgestellten Informationen. Jegliche Haftungsansprüche gegen uns, die sich auf
+              Schäden materieller oder ideeller Art beziehen — verursacht durch die Nutzung oder Nichtnutzung der
+              dargebotenen Inhalte bzw. durch Nutzung fehlerhafter und unvollständiger Informationen — sind grundsätzlich
+              ausgeschlossen.
             </p>
           </section>
 
           <section className="border-l-2 border-pine/25 pl-4">
-            <h2 className="text-lg font-semibold text-pine">Urheberrechte</h2>
+            <h2 className="text-lg font-semibold text-pine">Externe Links</h2>
             <p className="mt-2">
-              Inhalte, Texte und Gestaltung dieser Website unterliegen dem Urheberrecht. Jede Nutzung ausserhalb der
-              gesetzlich zulässigen Grenzen bedarf der vorherigen Zustimmung der Rechteinhaberin.
+              Unsere Webseite enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+              Deshalb übernehmen wir für diese fremden Inhalte auch keine Gewähr. Für die Inhalte der verlinkten Seiten
+              ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
             </p>
           </section>
 
           <section className="border-l-2 border-pine/25 pl-4">
-            <h2 className="text-lg font-semibold text-pine">Quelle der Stammdaten</h2>
+            <h2 className="text-lg font-semibold text-pine">Urheberrecht</h2>
             <p className="mt-2">
-              Firmenname, Adresse, Telefon und E-Mail wurden aus der öffentlich zugänglichen Lefita-Website übernommen.
+              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem
+              schweizerischen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung,
+              Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechts bedürfen
+              unserer schriftlichen Zustimmung.
+            </p>
+          </section>
+
+          <section className="border-l-2 border-clay/35 pl-4">
+            <h2 className="text-lg font-semibold text-pine">Änderungen und Irrtümer</h2>
+            <p className="mt-2">
+              Wir behalten uns ausdrücklich vor, Teile der Seiten oder das gesamte Angebot jederzeit zu ändern, zu
+              ergänzen, zu löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen. Sollten einzelne
+              Formulierungen oder Darstellungen dieses Haftungsausschlusses unwirksam sein, bleiben die übrigen
+              Bestimmungen davon unberührt.
             </p>
           </section>
         </div>

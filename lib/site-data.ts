@@ -27,6 +27,7 @@ export const topNavigation = [
   { href: "/", label: "Start" },
   { href: "/angebot", label: "Angebot" },
   { href: "/ablauf", label: "Ablauf" },
+  { href: "/diplom", label: "Diplom" },
   { href: "/termin", label: "Termin" },
   { href: "/kontakt", label: "Kontakt" }
 ] as const;

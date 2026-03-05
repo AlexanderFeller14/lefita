@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { LocalBusinessJsonLd } from "@/components/local-business-jsonld";
+import { CookieBanner } from "@/components/cookie-banner";
 import { siteConfig } from "@/lib/site-data";
 
 const sans = Manrope({
@@ -54,6 +55,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <CookieBanner />
       </body>
     </html>
   );
