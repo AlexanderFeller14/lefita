@@ -114,10 +114,7 @@ export const importantInfoBlocks = [
 
 export const preparationChecklist = [
   "Leine und Halsband/Geschirr mitbringen",
-  "Falls vorhanden: kurze Hinweise zu Allergien, empfindlichen Stellen oder Verhalten",
-  "Welpen dürfen zuerst kurz den Salon kennenlernen",
-  "Nervöse Hunde bitte bereits bei der Buchung angeben",
-  "Grosse Hunde sind willkommen und werden passend eingeplant"
+  "Falls vorhanden: kurze Hinweise zu Allergien, empfindlichen Stellen oder Verhalten"
 ] as const;
 
 export const homeFlow = [
