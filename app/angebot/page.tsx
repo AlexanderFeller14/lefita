@@ -186,9 +186,9 @@ export default function AngebotPage() {
           eyebrow="Einzelservices"
           title="Modular buchbar"
           intro="Leistungen können je nach Bedarf einzeln kombiniert werden."
-          variant="plain"
+          variant="panel"
         >
-          <ul className="grid gap-2 md:grid-cols-2">
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {[
               "Baden und Föhnen",
               "Frisieren / Effilieren",
@@ -199,11 +199,14 @@ export default function AngebotPage() {
               "Krallenpflege",
               "Zahnreinigung"
             ].map((item) => (
-              <li key={item} className="rounded-xl border border-pine/15 bg-white px-4 py-3 text-sm text-pine">
-                {item}
-              </li>
+              <div key={item} className="group flex items-center gap-2.5 rounded-2xl border border-pine/10 bg-white px-4 py-3 transition hover:border-pine/25 hover:shadow-md">
+                <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg bg-clay/8 text-clay transition group-hover:bg-clay/15">
+                  <span className="h-1.5 w-1.5 rounded-full bg-current" />
+                </span>
+                <span className="text-sm font-semibold text-pine">{item}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </SectionShell>
 
       </div>
