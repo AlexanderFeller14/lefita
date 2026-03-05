@@ -101,32 +101,84 @@ export default function AngebotPage() {
           variant="panel"
         >
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-            {sizePricing.map((row) => (
-              <article key={row.size} className="rounded-xl border border-pine/15 bg-white p-4 text-sm text-pine/85">
-                <h2 className="font-semibold text-pine">{row.size}</h2>
-                <p className="mt-2 inline-flex rounded-full border border-pine/20 bg-white px-2.5 py-1 text-xs font-semibold text-pine">
+            {sizePricing.map((row, i) => (
+              <article key={row.size} className="group rounded-2xl border border-pine/10 bg-white p-5 transition hover:border-pine/25 hover:shadow-md">
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-clay/8 text-clay transition group-hover:bg-clay/15">
+                  {/* Small dog — small paw */}
+                  {i === 0 && (
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                      <ellipse cx="12" cy="16" rx="4.5" ry="3.5" />
+                      <circle cx="7" cy="9" r="2" />
+                      <circle cx="17" cy="9" r="2" />
+                      <circle cx="10" cy="6" r="1.8" />
+                      <circle cx="14" cy="6" r="1.8" />
+                    </svg>
+                  )}
+                  {/* Medium dog — medium paw */}
+                  {i === 1 && (
+                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                      <ellipse cx="12" cy="16" rx="4.5" ry="3.5" />
+                      <circle cx="7" cy="9" r="2" />
+                      <circle cx="17" cy="9" r="2" />
+                      <circle cx="10" cy="6" r="1.8" />
+                      <circle cx="14" cy="6" r="1.8" />
+                    </svg>
+                  )}
+                  {/* Large dog — large paw */}
+                  {i === 2 && (
+                    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+                      <ellipse cx="12" cy="16" rx="4.5" ry="3.5" />
+                      <circle cx="7" cy="9" r="2" />
+                      <circle cx="17" cy="9" r="2" />
+                      <circle cx="10" cy="6" r="1.8" />
+                      <circle cx="14" cy="6" r="1.8" />
+                    </svg>
+                  )}
+                </span>
+
+                <h2 className="mt-3 font-bold text-pine">{row.size}</h2>
+                <div className="mt-1 h-px w-10 rounded bg-clay/25" />
+
+                <p className="mt-3 inline-flex rounded-full border border-clay/25 bg-clay/5 px-2.5 py-1 text-xs font-semibold text-pine">
                   {row.range}
                 </p>
-                <p className="mt-3 text-xs leading-relaxed text-pine/75">{row.note}</p>
+                <p className="mt-2.5 text-xs leading-relaxed text-pine/75">{row.note}</p>
               </article>
             ))}
 
-            <article className="rounded-xl border border-clay/45 bg-white p-4 text-sm text-pine/85">
-              <h2 className="font-semibold text-pine">Zahnreinigung</h2>
-              <p className="mt-2 inline-flex rounded-full border border-clay/40 bg-white px-2.5 py-1 text-xs font-semibold text-pine">
+            <article className="group rounded-2xl border border-clay/30 bg-white p-5 transition hover:border-clay/45 hover:shadow-md">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-clay/8 text-clay transition group-hover:bg-clay/15">
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 3c-1.5 0-3 1.2-3 3.5 0 2 .8 3.5 1.5 5l2.5 6c.3.8 1 1.5 2 1.5h4c1 0 1.7-.7 2-1.5l2.5-6c.7-1.5 1.5-3 1.5-5C20 4.2 18.5 3 17 3c-1.5 0-2.5 1-3 2-.5 1-1 1.5-2 1.5s-1.5-.5-2-1.5C9.5 4 8.5 3 7 3z" />
+                </svg>
+              </span>
+
+              <h2 className="mt-3 font-bold text-pine">Zahnreinigung</h2>
+              <div className="mt-1 h-px w-10 rounded bg-clay/25" />
+
+              <p className="mt-3 inline-flex rounded-full border border-clay/30 bg-clay/5 px-2.5 py-1 text-xs font-semibold text-pine">
                 {dentalFacts.minutePrice}
               </p>
-              <p className="mt-3 text-xs leading-relaxed text-pine/75">
+              <p className="mt-2.5 text-xs leading-relaxed text-pine/75">
                 Erstbehandlung: {dentalFacts.firstTreatmentRange}
               </p>
             </article>
           </div>
 
-          <div className="mt-4 rounded-xl border border-pine/20 bg-white p-4 text-sm text-pine/80">
-            <p className="font-semibold text-pine">Hinweis zu Verfilzung & Zeitaufwand</p>
-            <p className="mt-2 leading-relaxed">
-              Bei starker Verfilzung steigt der Zeitaufwand. Die Pflege wird möglichst schonend und transparent geplant.
-            </p>
+          <div className="mt-4 flex gap-3 rounded-2xl border border-pine/10 bg-white p-5 text-sm text-pine/80">
+            <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-clay/8 text-clay">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </span>
+            <div>
+              <p className="font-bold text-pine">Hinweis zu Verfilzung & Zeitaufwand</p>
+              <p className="mt-1 leading-relaxed">
+                Bei starker Verfilzung steigt der Zeitaufwand. Die Pflege wird möglichst schonend und transparent geplant.
+              </p>
+            </div>
           </div>
         </SectionShell>
 
